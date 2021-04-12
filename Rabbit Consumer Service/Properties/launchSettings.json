@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Rabbit_Consumer_Service": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
