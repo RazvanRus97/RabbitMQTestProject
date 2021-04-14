@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Rabbit_Consumer_Service.Repositories;
 
 namespace Rabbit_Consumer_Service
 {
@@ -14,6 +15,7 @@ namespace Rabbit_Consumer_Service
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddSingleton<IMessageRepository, MessageRepository>();
                     services.AddHostedService<Worker>();
                 });
     }
